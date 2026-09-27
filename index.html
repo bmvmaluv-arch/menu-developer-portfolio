@@ -1,0 +1,266 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MENU DEVELOPER — Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+:root{--ink:#191714;--muted:#777068;--paper:#f4f0e9;--warm:#e7ded2;--line:#d5ccc0;--accent:#9d4f49;--white:#fbfaf7;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Noto Sans KR',Arial,sans-serif;--max:1200px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.8}img{display:block;width:100%}a{color:inherit;text-decoration:none}
+.nav{position:fixed;z-index:50;left:0;right:0;top:0;padding:22px 4.5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(244,240,233,.84);backdrop-filter:blur(15px);border-bottom:1px solid rgba(213,204,192,.55)}.logo{font-size:10px;letter-spacing:.18em;font-weight:600}.navlinks{display:flex;gap:28px;font-size:9px;letter-spacing:.17em;color:#57514a}
+.hero{min-height:100vh;padding:150px 4.5vw 70px;display:grid;grid-template-columns:.82fr 1.18fr;gap:7vw;align-items:end}.eyebrow{font-size:9px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(75px,10vw,150px);line-height:.72;letter-spacing:-.06em;margin:25px 0 45px}.hero h1 i{font-style:italic}.hero-lead{font-size:17px;line-height:1.9;max-width:500px}.hero-lead strong{font-weight:600}.hero-meta{margin-top:42px;border-top:1px solid var(--line);padding-top:15px;font-size:9px;letter-spacing:.12em;color:var(--muted)}.hero-image{position:relative}.hero-image img{height:min(75vh,780px);object-fit:cover}.hero-caption{position:absolute;bottom:18px;left:18px;background:rgba(25,23,20,.92);color:white;padding:10px 14px;font-size:9px;letter-spacing:.16em}
+
+section{padding:130px 4.5vw}.container{max-width:var(--max);margin:auto}.head{display:grid;grid-template-columns:170px 1fr;gap:5vw;margin-bottom:75px}.num{font-size:9px;letter-spacing:.2em;color:var(--muted)}h2{font-family:var(--serif);font-weight:400;font-size:clamp(52px,6vw,88px);line-height:.88;letter-spacing:-.05em;margin:0}.intro{font-size:15px;color:#514b45;max-width:700px;margin:25px 0 0;line-height:1.95}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:9vw}.about-big{font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);line-height:1.12;letter-spacing:-.035em}.about-copy{color:#57514b}.facts{margin-top:35px;border-top:1px solid var(--line)}.fact{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:14px 0;font-size:11px}.fact span:last-child{color:var(--muted)}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center}.story-image{aspect-ratio:4/5;object-fit:cover}.nowrap{white-space:nowrap}.story-copy h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.04em;margin:12px 0 22px}.story-copy p{max-width:620px;color:#514b45}.quote{border-left:1px solid var(--accent);padding-left:18px;margin:24px 0;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3}
+.project{padding:115px 0;border-top:1px solid var(--line)}.project:first-of-type{border-top:0}.project-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.index{font-size:9px;letter-spacing:.2em;color:var(--muted)}.project h3{font-family:var(--serif);font-size:clamp(48px,6vw,88px);line-height:.83;font-weight:400;letter-spacing:-.055em;margin:8px 0 0}.project-tag{font-size:9px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}.main-img{aspect-ratio:16/9;object-fit:cover}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:3vw;margin-top:3vw}.project-grid img{aspect-ratio:1.08/1;object-fit:cover}.project-copy{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:48px}.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px}.case-item{border-top:1px solid var(--line);padding-top:11px}.case-item .label{margin-bottom:8px}.case-item p{margin:0;color:#514b45;font-size:22px;line-height:1.8}.result-note{margin-top:35px;padding-top:18px;border-top:1px solid var(--line);font-size:22px;line-height:1.8;color:#514b45}.result-note b{font-size:11px;letter-spacing:.15em;margin-right:10px}.label{font-size:9px;letter-spacing:.2em;color:var(--muted);margin-bottom:12px}.project-copy p{margin:0;color:#514b45;font-size:13px;line-height:1.95}.points{display:grid;grid-template-columns:1fr 1fr;gap:18px}.point{border-top:1px solid var(--line);padding-top:11px;font-size:10.5px;line-height:1.7}.point b{display:block;font-size:9px;letter-spacing:.14em;margin-bottom:5px}.pull{font-family:var(--sans);font-size:clamp(16px,1.25vw,20px);font-weight:400;line-height:1.35;letter-spacing:-.025em;max-width:760px;margin:42px 0 0;padding-left:18px;border-left:1px solid var(--accent);color:#3f3934}.sales-note{display:inline-block;margin-top:28px;padding:8px 12px;border:1px solid #b9afa3;font-size:9px;letter-spacing:.12em;color:#5f5750}
+.archive{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--warm);overflow:hidden}.card img{aspect-ratio:4/5;object-fit:cover}.card .cap{padding:13px 14px 16px;font-size:10px;letter-spacing:.12em}.card .cap small{display:block;color:var(--muted);letter-spacing:.04em;margin-top:3px}
+.field-note{display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;align-items:center;margin-bottom:75px}.field-note img{aspect-ratio:16/10;object-fit:cover}.field-note h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.7vw,38px);line-height:1;letter-spacing:-.04em;margin:0 0 20px}.field-note p{color:#57514b}.evidence{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}.evidence img{object-fit:cover;height:100%}.evidence-main{min-height:530px}.evidence-side{display:grid;gap:22px}.evidence-side img{height:254px}
+.strengths{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.strength{padding:30px 18px;border-right:1px solid var(--line)}.strength:last-child{border-right:0}.strength b{font-size:9px;letter-spacing:.15em}.strength p{font-size:11px;color:var(--muted);line-height:1.75}
+.contact{background:var(--warm);padding-top:105px;padding-bottom:105px}.contact-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:7vw;align-items:start}.contact-left{display:flex;align-items:flex-start;justify-content:center}.contact-photo{width:70%;aspect-ratio:4/5;background:#ded6cb;overflow:hidden;position:relative}.contact-photo img{height:100%;object-fit:cover}.photo-note{position:absolute;left:14px;bottom:12px;font-size:8px;letter-spacing:.16em;color:#716a62;background:rgba(251,250,247,.82);padding:5px 8px}.contact-title .eyebrow{margin-bottom:18px}.contact h2{font-size:clamp(48px,5.5vw,78px);line-height:.84}.contact-tagline{margin-top:18px!important;max-width:250px}.profile-info{border-top:1px solid rgba(90,80,70,.28);padding-top:4px;display:grid;grid-template-columns:1fr 1fr;gap:0 3.5vw}.profile-block{padding:21px 0;border-bottom:1px solid rgba(90,80,70,.22)}.profile-block.full{grid-column:1/-1}.profile-label{font-size:8px;letter-spacing:.18em;color:#777068;margin-bottom:8px}.profile-value{font-size:13px;line-height:1.75;color:#3f3933}.profile-value strong{font-weight:500}.contact p{color:#57514b;font-size:13px}.contact-note{font-size:10px!important;color:#817970!important;margin-top:22px!important}.footer{padding:25px 4.5vw;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.15em;color:var(--muted)}
+.zoom{cursor:zoom-in}.lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(12,11,10,.95);align-items:center;justify-content:center;padding:5vw}.lightbox.open{display:flex}.lightbox img{max-width:90vw;max-height:90vh;width:auto;object-fit:contain}.close{position:absolute;top:20px;right:25px;color:white;background:none;border:0;font-size:30px;cursor:pointer}
+@media(max-width:820px){
+.contact-grid{grid-template-columns:1fr}
+.contact-left{display:flex}
+.contact-photo{min-height:0;width:70%}
+.contact-info{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:35px}
+.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:120px}.hero-image{order:-1}.hero-image img{height:65vh}.head,.about,.story,.project-copy,.contact-grid,.field-note,.evidence,.case-grid{grid-template-columns:1fr}.contact-left{display:flex}.contact-photo{width:70%;margin:0 auto}.profile-info{grid-template-columns:1fr}.profile-block.full{grid-column:auto}.project-top{display:block}.project-tag{margin-top:18px}.project-grid{grid-template-columns:1fr}.archive{grid-template-columns:1fr 1fr}.strengths{grid-template-columns:1fr 1fr}.strength:nth-child(2){border-right:0}.strength:nth-child(3),.strength:nth-child(4){border-top:1px solid var(--line)}}@media(max-width:520px){
+.contact-left{display:flex}
+.contact-photo{min-height:0;aspect-ratio:4/5;width:70%;margin:0 auto}
+.contact-message{padding:15px 0 20px}
+.contact-info{grid-template-columns:1fr}
+section{padding:90px 5vw}.hero{padding-left:5vw;padding-right:5vw}.archive,.strengths{grid-template-columns:1fr}.strength{border-right:0!important;border-bottom:1px solid var(--line)}.strength:last-child{border-bottom:0}}
+
+/* V12 — compact profile banner / larger photo */
+.profile-section .profile-grid{
+  display:grid !important;
+  grid-template-columns:minmax(460px,1.25fr) minmax(360px,.95fr) !important;
+  gap:42px !important;
+  align-items:stretch !important;
+}
+.profile-section .profile-photo,
+.profile-section .profile-photo-placeholder{
+  min-height:600px !important;
+  height:100% !important;
+}
+.profile-section .profile-info{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  grid-template-rows:auto auto auto !important;
+  gap:28px 32px !important;
+  align-content:center !important;
+}
+.profile-section .profile-info .info-block{
+  margin:0 !important;
+  padding:0 0 20px !important;
+  border-bottom:1px solid rgba(0,0,0,.14) !important;
+}
+.profile-section .profile-info .info-block:nth-child(5){
+  grid-column:1 / -1 !important;
+  border-bottom:0 !important;
+}
+.profile-section .profile-info h3{
+  margin-bottom:11px !important;
+  font-size:12px !important;
+  letter-spacing:.16em !important;
+}
+.profile-section .profile-info p,
+.profile-section .profile-info li{
+  font-size:14px !important;
+  line-height:1.6 !important;
+}
+@media (max-width:900px){
+  .profile-section .profile-grid{
+    grid-template-columns:1fr !important;
+  }
+  .profile-section .profile-photo,
+  .profile-section .profile-photo-placeholder{
+    min-height:460px !important;
+  }
+  .profile-section .profile-info{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+@media (max-width:560px){
+  .profile-section .profile-info{
+    grid-template-columns:1fr !important;
+  }
+  .profile-section .profile-info .info-block:nth-child(5){
+    grid-column:auto !important;
+  }
+}
+
+
+/* FINAL V14 — profile/contact layout */
+.contact{
+  padding-top:42px !important;
+  padding-bottom:42px !important;
+}
+.contact-grid{
+  display:grid !important;
+  grid-template-columns:300px minmax(0,1fr) !important;
+  gap:52px !important;
+  align-items:center !important;
+}
+.contact-left{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.contact-photo{
+  width:300px !important;
+  height:400px !important;
+  min-height:0 !important;
+  aspect-ratio:3 / 4 !important;
+  object-fit:cover !important;
+  margin:0 !important;
+}
+.contact-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  display:block !important;
+}
+.contact-info{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  grid-template-rows:auto auto auto !important;
+  column-gap:42px !important;
+  row-gap:22px !important;
+  border:0 !important;
+  padding:0 !important;
+  align-content:center !important;
+}
+.contact-info .info-column{
+  display:contents !important;
+}
+.contact-info .info-block{
+  margin:0 !important;
+  padding:0 0 15px !important;
+  border-bottom:1px solid var(--line) !important;
+}
+.contact-info .info-column:first-child .info-block:nth-child(1){grid-column:1;grid-row:1}
+.contact-info .info-column:first-child .info-block:nth-child(2){grid-column:1;grid-row:2}
+.contact-info .info-column:nth-child(2) .info-block:nth-child(1){grid-column:2;grid-row:1}
+.contact-info .info-column:nth-child(2) .info-block:nth-child(2){grid-column:2;grid-row:2}
+.contact-info .info-column:nth-child(2) .info-block:nth-child(3){
+  grid-column:2;
+  grid-row:3;
+  border-bottom:0 !important;
+}
+.contact-info .info-block b{
+  display:block !important;
+  margin-bottom:8px !important;
+  font-size:10px !important;
+  letter-spacing:.16em !important;
+}
+.contact-info .info-block p{
+  margin:0 !important;
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+@media(max-width:800px){
+  .contact-grid{
+    grid-template-columns:230px minmax(0,1fr) !important;
+    gap:32px !important;
+  }
+  .contact-photo{
+    width:230px !important;
+    height:307px !important;
+  }
+}
+@media(max-width:560px){
+  .contact-grid{
+    grid-template-columns:1fr !important;
+    gap:30px !important;
+  }
+  .contact-photo{
+    width:min(72vw,300px) !important;
+    height:auto !important;
+    aspect-ratio:3 / 4 !important;
+  }
+  .contact-info{
+    grid-template-columns:1fr !important;
+    grid-template-rows:auto !important;
+    row-gap:22px !important;
+  }
+  .contact-info .info-column:first-child .info-block:nth-child(1),
+  .contact-info .info-column:first-child .info-block:nth-child(2),
+  .contact-info .info-column:nth-child(2) .info-block:nth-child(1),
+  .contact-info .info-column:nth-child(2) .info-block:nth-child(2),
+  .contact-info .info-column:nth-child(2) .info-block:nth-child(3){
+    grid-column:1 !important;
+    grid-row:auto !important;
+  }
+}
+
+
+/* PULL typography adjustment */
+.pull{font-family:var(--sans) !important;font-weight:400 !important;font-style:normal !important;}
+</style></head>
+<body>
+<nav class="nav"><a class="logo" href="#top">MENU DEVELOPER / PORTFOLIO</a><div class="navlinks"><a href="#about">ABOUT</a><a href="#projects">DEVELOPMENT</a><a href="#projects">PROJECTS</a><a href="#field">FIELD</a><a href="#archive">ARCHIVE</a></div></nav>
+<main id="top">
+<section class="hero">
+<div><div class="eyebrow">BAKERY · MENU DEVELOPMENT · PRODUCT STYLING</div><h1>MAKE.<br><i>SELL.</i><br>DEVELOP.</h1><div class="hero-lead"><strong>직접 만들고, 직접 팔아본 실무자.</strong><br>레시피를 만드는 데서 멈추지 않고 실제 매장에서 제품을 판매하며 고객의 반응과 판매 환경을 경험했습니다. 그래서 맛과 식감, 비주얼뿐 아니라 ‘왜 이 제품을 고르는가’까지 생각하며 개발합니다.</div><div class="hero-meta">IDEA → RECIPE → TEST → PRODUCT → CUSTOMER → NEXT DEVELOPMENT</div></div>
+<div class="hero-image"><img class="zoom" src="assets/chocolate-financier.jpg" alt="Chocolate almond financier"><div class="hero-caption">CHOCOLATE ALMOND FINANCIER / SIGNATURE PRODUCT</div></div>
+</section>
+<section id="about"><div class="container"><div class="head"><div class="num">01 / ABOUT</div><div><h2>A developer<br>who has sold.</h2><p class="intro">직접 개발한 제품을 매장에 올리고, 고객에게 설명하고, 실제 판매를 지켜봤습니다. 개발 단계에서 예상한 맛과 식감이 실제 고객에게 어떻게 받아들여지는지 확인하고 다음 제품에 반영할 수 있다는 것이 제가 가진 실무 경험입니다.</p></div></div>
+<div class="about"><div class="about-big">개발자의 시선과<br>판매자의 시선을<br>함께 봅니다.</div><div class="about-copy">좋은 레시피만으로 좋은 상품이 완성되는 것은 아니라고 생각합니다. 한눈에 집고 싶은 비주얼인지, 한입 먹었을 때 맛의 흐름이 자연스러운지, 다른 메뉴와 함께 샀을 때 만족도가 높은지까지 실제 판매 환경에서 확인했습니다.<div class="facts"><div class="fact"><span>Recipe Development</span><span>Recipe · Testing · Flavor</span></div><div class="fact"><span>Customer Insight</span><span>Direct Sales · Feedback</span></div><div class="fact"><span>Productization</span><span>Visual · Packaging · Line-up</span></div><div class="fact"><span>Food Styling</span><span>Product Presentation</span></div></div></div></div></div></section>
+
+<section id="projects"><div class="container"><div class="head"><div class="num">02 / MENU DEVELOPMENT</div><div><h2>From idea<br>to product.</h2><p class="intro">메뉴마다 개발의 출발점은 달랐지만, 기준은 같았습니다. 고객과 판매 환경을 고려해 목표를 정하고, 맛·식감·당도·구성을 테스트하며 실제 판매 가능한 제품으로 완성했습니다.</p></div></div>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 01</div><h3>TIGRE</h3></div><div class="project-tag">Texture · Sweetness · Filling</div></div><img class="main-img zoom" src="assets/tigre-lineup.jpg" alt="Tigre lineup"><div class="case-grid"><div class="case-item"><div class="label">PURPOSE</div><p>휘낭시에와 다른, 더 선명한 식감의 구움과자를 만들고자 했습니다.</p></div><div class="case-item"><div class="label">TARGET</div><p>겉은 바삭하고 속은 탄력 있게, 찐득하고 푹신한 인상은 덜어냈습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>다크초콜릿·얼그레이·시금치 가나슈와 설탕 입자를 바꿔가며 당도와 식감을 조정했습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>필링뿐 아니라 반죽과 코팅까지 제품의 캐릭터가 드러나는 티그레로 완성했습니다.</p></div></div><div class="project-grid"><img class="zoom" src="assets/tigre-hero.jpg" alt="Tigre styled photo"><img class="zoom" src="assets/tigre-detail.jpg" alt="Tigre detail"></div><div class="pull">필링의 풍미에만 기대지 않고, 반죽의 식감과 설탕 코팅까지 제품의 기준으로 삼았습니다.</div></article>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 02</div><h3>CHOCOLATE<br>FINANCIER</h3></div><div class="project-tag">Signature · Top seller</div></div><img class="main-img zoom" src="assets/chocolate-financier.jpg" alt="Chocolate almond financier"><div class="case-grid"><div class="case-item"><div class="label">PURPOSE</div><p>초콜릿의 깊이와 아몬드의 고소함이 함께 살아 있는 대표 휘낭시에를 개발했습니다.</p></div><div class="case-item"><div class="label">TARGET</div><p>진한 풍미를 유지하면서 과하게 달지 않고, 밀도 있는 식감을 목표로 했습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>초콜릿·아몬드의 배합과 당도, 한입의 밀도와 씹는 맛을 반복해서 조정했습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>실제 매장에서 에그타르트와 함께 매출 1위를 기록한 대표 메뉴로 판매했습니다.</p></div></div><div class="project-grid"><img class="zoom" src="assets/financier-lineup.jpg" alt="Financier lineup"><img class="zoom" src="assets/financier-detail.jpg" alt="Financier detail"></div><div class="pull">좋아하는 맛을 만드는 것에서 끝내지 않고, 실제 고객의 선택으로 이어지는 제품을 만들었습니다.</div></article>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 03</div><h3>SPINACH ×<br>CHOCOLATE</h3></div><div class="project-tag">Original concept · Flavor pairing</div></div><img class="main-img zoom" src="assets/spinach-chocolate.jpg" alt="Spinach chocolate cake"><div class="case-grid"><div class="case-item"><div class="label">ORIGIN</div><p>어린 시절 본 애니메이션 속 시금치 쉬폰케이크 장면에서 출발한 아이디어입니다.</p></div><div class="case-item"><div class="label">PURPOSE</div><p>추억에 머물지 않고, 실제 베이커리에서 판매할 수 있는 디저트로 구현했습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>시금치의 쓴맛은 줄이고 향긋한 풍미를 살린 뒤, 초콜릿과의 조합으로 맛의 방향을 잡았습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>익숙하지 않은 재료를 디저트의 주재료로 전환한 오리지널 메뉴로 상품화했습니다.</p></div></div><div class="result-note"><b>DEVELOPMENT STORY</b> 어린 시절의 장면을 실제 제품으로 옮기는 과정에서 ‘시금치가 이런 맛이라고?’라는 경험을 만들고자 했습니다.</div></article>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 04</div><h3>RED VELVET<br>CREAM CHEESE</h3></div><div class="project-tag">Customer insight · Coffee pairing</div></div><img class="main-img zoom" src="assets/red-velvet-cookie.jpg" alt="Red velvet cream cheese cookie"><div class="case-grid"><div class="case-item"><div class="label">INSIGHT</div><p>커피만 구매하는 고객을 보고, 커피와 함께 선택할 메뉴의 필요성을 발견했습니다.</p></div><div class="case-item"><div class="label">PURPOSE</div><p>가볍게 곁들이는 쿠키보다 한 개만으로도 만족감이 있는 제품을 목표로 했습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>두툼하고 쫀득한 쿠키에 크림치즈를 넉넉히 넣고, 산뜻함으로 단맛의 무게를 조절했습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>커피와 함께 먹기 좋고 든든하다는 고객 반응을 실제 판매 과정에서 확인했습니다.</p></div></div><div class="pull">고객이 매장에서 무엇을 함께 고르는지부터 보고, 제품의 역할을 정했습니다.</div></article>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 05</div><h3>EGG<br>TART</h3></div><div class="project-tag">Texture · Custard · Top seller</div></div><img class="main-img zoom" src="assets/egg-tart.jpg" alt="Egg tart"><div class="case-grid"><div class="case-item"><div class="label">PURPOSE</div><p>한 가지 맛으로 끝나지 않는, 식감과 향의 흐름이 있는 에그타르트를 만들었습니다.</p></div><div class="case-item"><div class="label">TARGET</div><p>파이지와 페이스트리 사이의 바삭함과 결을 가진 타르트지를 목표로 했습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>생크림·계란 노른자의 진한 풍미에 바닐라빈을 더하고 타르트지와의 비율을 조정했습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>실제 매장에서 초콜릿 휘낭시에와 함께 매출 1위를 기록한 대표 메뉴로 판매했습니다.</p></div></div><div class="pull">바삭한 타르트지, 진한 커스터드, 바닐라빈의 향이 한입 안에서 순서대로 느껴지도록 설계했습니다.</div></article>
+
+<article class="project"><div class="project-top"><div><div class="index">PROJECT 06</div><h3>CHOCOLATE<br>CANELÉ</h3></div><div class="project-tag">Dark chocolate · Texture contrast</div></div><img class="main-img zoom" src="assets/chocolate-canele.jpg" alt="Chocolate canelé"><div class="case-grid"><div class="case-item"><div class="label">PURPOSE</div><p>달콤함만 남는 초콜릿 디저트가 아닌, 다크초콜릿의 깊은 풍미를 살리고자 했습니다.</p></div><div class="case-item"><div class="label">TARGET</div><p>겉은 빠삭하고 속은 쫀득한 까눌레의 식감 대비를 분명하게 가져갔습니다.</p></div><div class="case-item"><div class="label">DEVELOPMENT</div><p>다크초콜릿의 달콤쌉쌀함과 초코 반죽의 풍미가 식감과 함께 이어지도록 구성했습니다.</p></div><div class="case-item"><div class="label">RESULT</div><p>초콜릿의 풍미와 까눌레 고유의 식감이 동시에 살아 있는 제품으로 완성했습니다.</p></div></div><div class="pull">다크초콜릿의 쌉쌀함과 까눌레의 빠삭하고 쫀득한 식감을 한입에 함께 담았습니다.</div></article>
+</div></section>
+
+<section id="field"><div class="container"><div class="head"><div class="num">03 / FIELD EXPERIENCE</div><div><h2>Not just<br>a recipe.</h2><p class="intro">제품을 만든 뒤 실제 매장에 올리고, 진열하고, 포장하고, 고객에게 판매했습니다. 이 경험은 메뉴 개발을 ‘레시피 작업’이 아니라 실제 상품을 완성하는 과정으로 이해하게 했습니다.</p></div></div>
+<div class="field-note"><img class="zoom" src="assets/store-lineup.jpg" alt="Actual store product lineup"><div><div class="eyebrow">ACTUAL STORE / PRODUCT LINE-UP</div><h3>개발한 제품이<br>실제 판매대에 올라가는 순간.</h3><p>휘낭시에, 티그레, 쿠키, 에그타르트 등 다양한 제품을 하나의 판매 공간 안에서 구성하고, 제품별 가격과 비주얼, 진열 위치까지 직접 운영했습니다.</p></div></div>
+<div class="evidence"><div class="evidence-main"><img class="zoom" src="assets/store-counter.jpg" alt="Actual bakery counter"></div><div class="evidence-side"><img class="zoom" src="assets/retail-shelf.jpg" alt="Retail shelf and packaging"><img class="zoom" src="assets/packaging-styling.jpg" alt="Packaging and product styling"></div></div>
+<div class="pull">레시피가 완성되는 순간이 아니라, 고객에게 선택받는 순간까지가 제품 개발이라고 생각합니다.</div>
+</div></section>
+
+<section id="archive"><div class="container"><div class="head"><div class="num">04 / PRODUCT ARCHIVE</div><div><h2>A wider<br>range of products.</h2><p class="intro">직접 개발하고 생산·판매한 제품과 스타일링 작업을 제품 아카이브로 정리했습니다.</p></div></div>
+<div class="archive">
+<div class="card"><img class="zoom" src="assets/madeleine-lineup.jpg" alt="Madeleine lineup"><div class="cap">Cherry cheesecake<small>Cake Development</small></div></div>
+<div class="card"><img class="zoom" src="assets/pistachio-financier.jpg" alt="Pistachio financier"><div class="cap">PISTACHIO FINANCIER<small>Flavor · Product</small></div></div>
+<div class="card"><img class="zoom" src="assets/cherry-cheesecake.jpg" alt=""><div class="cap">Product · Styling<small>Merchandising · Styling</small></div></div>
+<div class="card"><img class="zoom" src="assets/basque-cheesecake.jpg" alt="Basque cheesecake"><div class="cap">BASQUE CHEESECAKE<small>Texture</small></div></div>
+<div class="card"><img class="zoom" src="assets/layer-cake-slices.jpg" alt="Layer cake"><div class="cap">LAYER CAKE<small>Product · Styling</small></div></div>
+<div class="card"><img class="zoom" src="assets/layer-cake-detail.jpg" alt="Layer cake detail"><div class="cap">CAKE DETAIL<small>Texture · Styling</small></div></div>
+<div class="card"><img class="zoom" src="assets/product-display.jpg" alt="Product display"><div class="cap">Madeleine<small>Texture</small></div></div>
+<div class="card"><img class="zoom" src="assets/retail-shelf.jpg" alt="Retail shelf"><div class="cap">RETAIL DISPLAY<small>Packaging · Merchandising</small></div></div>
+</div></div></section>
+
+<section><div class="container"><div class="head"><div class="num">05 / STRENGTHS</div><div><h2>What I bring<br>to a team.</h2><p class="intro">실제 제품을 만들고 판매한 경험을 바탕으로 개발 단계부터 상품화 이후의 고객 경험까지 연결해 생각합니다.</p></div></div><div class="strengths"><div class="strength"><b>RECIPE DEVELOPMENT</b><p>레시피 설계부터 테스트까지 직접 진행하며 맛과 식감의 기준을 세웁니다.</p></div><div class="strength"><b>CUSTOMER INSIGHT</b><p>직접 판매하며 고객의 반응을 관찰하고 다음 메뉴의 방향으로 연결합니다.</p></div><div class="strength"><b>PRODUCTIZATION</b><p>맛뿐 아니라 비주얼, 구성, 패키징까지 실제 판매 환경을 고려합니다.</p></div><div class="strength"><b>FOOD STYLING</b><p>제품의 특징과 매력을 한눈에 전달할 수 있도록 시각적으로 완성합니다.</p></div></div></div></section>
+
+<section class="contact">
+<div class="container contact-grid">
+  <div class="contact-left">
+    <div class="contact-photo contact-photo-large">
+      <img src="assets/profile-photo.jpg" alt="Profile photo placeholder">
+    </div>
+  </div>
+  <div class="contact-info">
+    <div class="info-block"><b>CONTACT</b><p>NAME / SHIM JIAN<br>EMAIL / zyanny@naver.com<br>PHONE / 010 - 6318 - 5604</p></div>
+    <div class="info-block"><b>EDUCATION</b><p>수원과학대학교 / 호텔조리 제과제빵학과 2017 졸업</p></div>
+    <div class="info-blo오전 12:50 2026-09-28ck"><b>MENU DEVELOPMENT EXPERIENCE</b><p>2025.10 ~ 2026.10 베이크샵 키베티 운영<br><p>2019.04 ~ 2020.08 브라운백커피 메뉴개발 직무 담당</p></div>
+    <div class="info-block"><b>CERTIFICATIONS</b><p>제과기능사 자격증 <br>케이크 디저트 디자이너 자격증 </p><p>웹디자인기능사 자격증 <br>컴퓨터활용능력2급 </p><p>ERP 인사 정보관리사 1급<br>1종보통운전면허 </p></div>
+    <div class="info-block"><b>CORE</b><p>Menu Development<br>Product Styling<br>Customer Insight</p></div>
+  </div>
+</div>
+</section>
+</main><footer class="footer"><span>MENU DEVELOPER PORTFOLIO</span><span>© 2026</span></footer>
+<div class="lightbox" id="lb"><button class="close" id="close">×</button><img id="lbimg" alt=""></div>
+<script>const lb=document.getElementById('lb'),li=document.getElementById('lbimg');document.querySelectorAll('.zoom').forEach(i=>i.addEventListener('click',()=>{li.src=i.src;li.alt=i.alt;lb.classList.add('open')}));document.getElementById('close').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape')lb.classList.remove('open')};</script>
+</body></html>
